@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
-function StudentAttendance() {
+function StudentStudentAttendance() {
   return (
     <body>
       {/* <!-- Preloader Start Here --> */}
@@ -54,93 +54,34 @@ function StudentAttendance() {
             <div className="sidebar-menu-content">
               <ul className="nav nav-sidebar-menu sidebar-toggle-view">
                 <li className="nav-item sidebar-nav-item">
-                  <Link to="/" className="nav-link">
+                  <Link to="" className="nav-link">
                     <i className="flaticon-classmates"></i>
                     <span>Students</span>
                   </Link>
                   <ul className="nav sub-group-menu sub-group-active">
                     <li className="nav-item">
-                      <Link to="/all-student.html" className="nav-link">
-                        <i className=""></i>All Students
+                      <Link to="/student-student-details" className="nav-link">
+                        <i className=""></i>Students Detials
                       </Link>
                     </li>
 
-                    <li className="nav-item">
-                      <Link to="/admit-form.html" className="nav-link">
-                        <i className=""></i>Admission Form
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        to="/student-profile-update.html"
-                        className="nav-link"
-                      >
-                        <i className=""></i>Profile Update
-                      </Link>
-                    </li>
+                    
                   </ul>
                 </li>
-                <li className="nav-item sidebar-nav-item">
-                  <Link to="/" className="nav-link">
-                    <i className="flaticon-multiple-users-silhouette"></i>
-                    <span>Teachers</span>
-                  </Link>
-                  <ul className="nav sub-group-menu sub-group-active">
-                    <li className="nav-item">
-                      <Link to="/all-teacher.html" className="nav-link">
-                        <i className=""></i>All Teachers
-                      </Link>
-                    </li>
-
-                    <li className="nav-item">
-                      <Link to="/add-teacher.html" className="nav-link">
-                        <i className=""></i>Add Teacher
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/update-profile.html" className="nav-link">
-                        <i className=""></i>Profile Update
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-
-                <li className="nav-item sidebar-nav-item">
-                  <Link to="/" className="nav-link">
-                    <i className="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
-                    <span>Class</span>
-                  </Link>
-                  <ul className="nav sub-group-menu sub-group-active">
-                    <li className="nav-item">
-                      <Link to="/all-class.html" className="nav-link">
-                        <i className=""></i>All Classes
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/add-class" className="nav-link">
-                        <i className=""></i>Add New Class
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                
 
          
 
                 <li className="nav-item">
-                  <Link to="/all-subject.html" className="nav-link">
+                  <Link to="/student-index" className="nav-link">
                     <i className="flaticon-open-book"></i>
                     <span>Subject</span>
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link to="/class-routine.html" className="nav-link">
-                    <i className="flaticon-calendar"></i>
-                    <span>Class Routine</span>
-                  </Link>
-                </li>
+           
                 <li className="nav-item">
                   <Link
-                    to="/student-attendence.html"
+                    to="/student-student-attendance"
                     className="nav-link menu-active"
                   >
                     <i className="flaticon-checklist"></i>
@@ -148,12 +89,7 @@ function StudentAttendance() {
                   </Link>
                 </li>
 
-                <li className="nav-item">
-                  <Link to="/account-settings.html" className="nav-link">
-                    <i className="flaticon-settings"></i>
-                    <span>Account</span>
-                  </Link>
-                </li>
+        
               </ul>
             </div>
           </div>
@@ -216,22 +152,14 @@ function StudentAttendance() {
                             <option value="12">December</option>
                           </select>
                         </div>
-                        <div className="col-xl-3 col-lg-6 col-12 form-group">
-                          <label>Select Session</label>
-                          <select className="select2">
-                            <option value="0">Select Session</option>
-                            <option value="1">2016-2017</option>
-                            <option value="2">2017-20108</option>
-                            <option value="3">2018-2019</option>
-                            <option value="4">2020-2021</option>
-                          </select>
-                        </div>
+                       
                         <div className="col-12 form-group mg-t-8">
                           <button
                             type="submit"
                             className="btn-fill-lg btn-gradient-yellow btn-hover-bluedark"
                           >
-                            Save
+                            Search
+						
                           </button>
                         </div>
                       </div>
@@ -302,4 +230,4 @@ function StudentAttendance() {
   );
 }
 
-export default StudentAttendance;
+export default StudentStudentAttendance;
