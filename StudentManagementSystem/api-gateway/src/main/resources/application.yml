@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: Admin
+        uri: http://localhost:8090/
+        predicates:
+        - Path=/admin/**
+      - id: Teacher
+        uri: http://localhost:8085/
+        predicates:
+        - Path=/teacher/**
+      - id: Student
+        uri: http://localhost:8084/
+        predicates:
+        - Path=/student/**
+      - id: Login
+        uri: http://localhost:8083/
+        predicates:
+        - Path=/login/**
+   
