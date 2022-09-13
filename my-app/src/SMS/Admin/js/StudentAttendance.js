@@ -220,18 +220,26 @@ function StudentAttendance() {
                           <label>Select Session</label>
                           <select className="select2">
                             <option value="0">Select Session</option>
-                            <option value="1">2016-2017</option>
-                            <option value="2">2017-20108</option>
-                            <option value="3">2018-2019</option>
-                            <option value="4">2020-2021</option>
+                            <option value="1">2019-2020</option>
+                            <option value="2">2020-2021</option>
+                            <option value="3">2021-2022</option>
+                            <option value="4">2022-2023</option>
                           </select>
                         </div>
-                        <div className="col-12 form-group mg-t-8">
+                        <div className="col-2 form-group mg-t-8">
                           <button
                             type="submit"
                             className="btn-fill-lg btn-gradient-yellow btn-hover-bluedark"
                           >
                             Save
+                          </button>
+                        </div>
+						 <div className="col-9 form-group mg-t-8">
+                          <button
+                            type="submit"
+                            className="btn-fill-lg btn-gradient-yellow btn-hover-bluedark"
+                          >
+                            All Download
                           </button>
                         </div>
                       </div>

@@ -245,13 +245,7 @@ function AllSubject() {
                             className="form-control"
                           />
                         </div>
-                        <div className="col-lg-3 col-12 form-group">
-                          <input
-                            type="text"
-                            placeholder="dd/mm/yyyy"
-                            className="form-control"
-                          />
-                        </div>
+                    
 
                         <div className="col-lg-2 col-12 form-group">
                           <button
@@ -262,14 +256,7 @@ function AllSubject() {
                           </button>
                         </div>
 
-                        <div className="col-lg-2 col-12 form-group">
-                          <button
-                            type="submit"
-                            className="fw-btn-fill btn-gradient-yellow"
-                          >
-                            UPDATE
-                          </button>
-                        </div>
+                        
                       </div>
                     </form>
                     <div className="table-responsive">

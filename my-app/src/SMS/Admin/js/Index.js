@@ -119,6 +119,7 @@ function Index() {
                   </ul>
                 </li>
 
+            
 
                 <li className="nav-item">
                   <Link to="/all-subject.html" className="nav-link">
@@ -180,6 +181,15 @@ function Index() {
                       >
                         SEARCH
                       </button>
+				
+                    </div>
+						  			    <div className="col-1-xxxl col-xl-2 col-lg-3 col-12 form-group">
+                      <button
+                        type="submit"
+                        className="fw-btn-fill btn-gradient-yellow"
+                      >
+                        Download All
+                      </button>
                     </div>
                   </div>
                 </form>
@@ -193,7 +203,7 @@ function Index() {
                         <th>Gender</th>
                         <th>Class</th>
                         <th>Section</th>
-                        <th>Parents</th>
+                        <th>Father</th>
                         <th>Address</th>
                         <th>Date Of Birth</th>
                         <th>Phone</th>
@@ -202,6 +212,8 @@ function Index() {
                       </tr>
                     </thead>
                   </table>
+				  
+	
                 </div>
               </div>
             </div>

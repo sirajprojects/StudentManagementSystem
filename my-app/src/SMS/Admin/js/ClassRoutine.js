@@ -242,18 +242,12 @@ function ClassRoutine() {
                     </div>
                     <form className="mg-b-20">
                       <div className="row gutters-8">
-                        <div className="col-lg-4 col-12 form-group">
-                          <input
-                            type="text"
-                            placeholder="Search by Day ..."
-                            className="form-control"
-                          />
-                        </div>
+              
 
                         <div className="col-lg-3 col-12 form-group">
                           <input
                             type="text"
-                            placeholder="Search by Section ..."
+                            placeholder="Search by Class ..."
                             className="form-control"
                           />
                         </div>

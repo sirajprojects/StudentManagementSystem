@@ -11,8 +11,8 @@ function AccountSettings() {
           {/* <!-- Header Menu Area Start Here --> */}
           <div class="navbar navbar-expand-md header-menu-one bg-light">
             <div class="navbar-head">
-           
-        
+
+
             </div>
             <div class="d-md-none mobile-nav-bar">
               <button
@@ -59,104 +59,104 @@ function AccountSettings() {
               </div>
               <div class="sidebar-menu-content">
                 <ul class="nav nav-sidebar-menu sidebar-toggle-view">
-          <li className="nav-item sidebar-nav-item">
-                  <Link to="" className="nav-link">
-                    <i className="flaticon-classmates"></i>
-                    <span>Students</span>
-                  </Link>
-                  <ul className="nav sub-group-menu sub-group-active">
-                    <li className="nav-item">
-                      <Link to="/all-student.html" className="nav-link">
-                        <i className=""></i>All Students
-                      </Link>
-                    </li>
+                  <li className="nav-item sidebar-nav-item">
+                    <Link to="" className="nav-link">
+                      <i className="flaticon-classmates"></i>
+                      <span>Students</span>
+                    </Link>
+                    <ul className="nav sub-group-menu sub-group-active">
+                      <li className="nav-item">
+                        <Link to="/all-student.html" className="nav-link">
+                          <i className=""></i>All Students
+                        </Link>
+                      </li>
 
-                    <li className="nav-item">
-                      <Link to="/admit-form.html" className="nav-link">
-                        <i className=""></i>Admission Form
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link
-                        to="/student-profile-update.html"
-                        className="nav-link"
-                      >
-                        <i className=""></i>Profile Update
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item sidebar-nav-item">
-                  <Link to="/" className="nav-link">
-                    <i className="flaticon-multiple-users-silhouette"></i>
-                    <span>Teachers</span>
-                  </Link>
-                  <ul className="nav sub-group-menu sub-group-active">
-                    <li className="nav-item">
-                      <Link to="/all-teacher.html" className="nav-link">
-                        <i className=""></i>All Teachers
-                      </Link>
-                    </li>
+                      <li className="nav-item">
+                        <Link to="/admit-form.html" className="nav-link">
+                          <i className=""></i>Admission Form
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link
+                          to="/student-profile-update.html"
+                          className="nav-link"
+                        >
+                          <i className=""></i>Profile Update
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li className="nav-item sidebar-nav-item">
+                    <Link to="/" className="nav-link">
+                      <i className="flaticon-multiple-users-silhouette"></i>
+                      <span>Teachers</span>
+                    </Link>
+                    <ul className="nav sub-group-menu sub-group-active">
+                      <li className="nav-item">
+                        <Link to="/all-teacher.html" className="nav-link">
+                          <i className=""></i>All Teachers
+                        </Link>
+                      </li>
 
-                    <li className="nav-item">
-                      <Link to="/add-teacher.html" className="nav-link">
-                        <i className=""></i>Add Teacher
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/update-profile.html" className="nav-link">
-                        <i className=""></i>Profile Update
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                      <li className="nav-item">
+                        <Link to="/add-teacher.html" className="nav-link">
+                          <i className=""></i>Add Teacher
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/update-profile.html" className="nav-link">
+                          <i className=""></i>Profile Update
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
 
-                <li className="nav-item sidebar-nav-item">
-                  <Link to="/" className="nav-link">
-                    <i className="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
-                    <span>Class</span>
-                  </Link>
-                  <ul className="nav sub-group-menu sub-group-active">
-                    <li className="nav-item">
-                      <Link to="/all-class.html" className="nav-link">
-                        <i className=""></i>All Classes
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/add-class" className="nav-link">
-                        <i className=""></i>Add New Class
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
+                  <li className="nav-item sidebar-nav-item">
+                    <Link to="/" className="nav-link">
+                      <i className="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i>
+                      <span>Class</span>
+                    </Link>
+                    <ul className="nav sub-group-menu sub-group-active">
+                      <li className="nav-item">
+                        <Link to="/all-class.html" className="nav-link">
+                          <i className=""></i>All Classes
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link to="/add-class" className="nav-link">
+                          <i className=""></i>Add New Class
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
 
-             
 
-                <li className="nav-item">
-                  <Link to="/all-subject.html" className="nav-link">
-                    <i className="flaticon-open-book"></i>
-                    <span>Subject</span>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/class-routine.html" className="nav-link">
-                    <i className="flaticon-calendar"></i>
-                    <span>Class Routine</span>
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/student-attendence.html" className="nav-link">
-                    <i className="flaticon-checklist"></i>
-                    <span>Attendence</span>
-                  </Link>
-                </li>
 
-                <li className="nav-item">
-                  <Link to="/account-settings.html" className="nav-link">
-                    <i className="flaticon-settings"></i>
-                    <span>Account</span>
-                  </Link>
-                </li>
+                  <li className="nav-item">
+                    <Link to="/all-subject.html" className="nav-link">
+                      <i className="flaticon-open-book"></i>
+                      <span>Subject</span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/class-routine.html" className="nav-link">
+                      <i className="flaticon-calendar"></i>
+                      <span>Class Routine</span>
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/student-attendence.html" className="nav-link">
+                      <i className="flaticon-checklist"></i>
+                      <span>Attendence</span>
+                    </Link>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link to="/account-settings.html" className="nav-link">
+                      <i className="flaticon-settings"></i>
+                      <span>Account</span>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -165,7 +165,7 @@ function AccountSettings() {
               {/* <!-- Breadcubs Area Start Here --> */}
               <div class="breadcrumbs-area">
                 <h3>Account Setting</h3>
-                
+
               </div>
               {/* <!-- Breadcubs Area End Here -->
                 <!-- Account Settings Area Start Here --> */}
@@ -177,7 +177,7 @@ function AccountSettings() {
                         <div class="item-title">
                           <h3>Add New User</h3>
                         </div>
-                      
+
                       </div>
                       <form class="new-added-form">
                         <div class="row">
@@ -346,7 +346,7 @@ function AccountSettings() {
                   </div>
                 </div>
                 <div class="col-4-xxxl col-xl-5">
-                 
+
                   <div class="col-8-xxxl col-xl-7"></div>
                 </div>
                 {/* <!-- Account Settings Area End Here --> */}
