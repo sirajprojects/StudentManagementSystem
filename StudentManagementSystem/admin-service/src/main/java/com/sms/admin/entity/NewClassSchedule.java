@@ -8,46 +8,49 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "newclassschedule")
+@Table(name = "new_class_schedule")
 
 public class NewClassSchedule {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	
 	private long id;
 
-	@Column(name = "teachername")
+	@Column(name = "teacher_name")
 	private String teachername;
 
-	@Column(name = "idno")
+	@Column(name = "id_no")
 	private String idno;
-	
+
 	@Column(name = "gender")
 	private String gender;
 
-	@Column(name = "isclass")
-	private String isclass	;
-	
+	@Column(name = "is_class")
+	private String isclass;
+
 	@Column(name = "subject")
 	private String subject;
 
 	@Column(name = "section")
 	private String section;
-	
-	
+
 	@Column(name = "time")
 	private String time;
 
 	@Column(name = "date")
 	private String date;
-	
-	
+
 	@Column(name = "phone")
 	private String phone;
 
 	@Column(name = "email")
 	private String email;
+	
+	
+
+	public NewClassSchedule() {
+		super();
+	}
 
 	public NewClassSchedule(String teachername, String idno, String gender, String isclass, String subject,
 			String section, String time, String date, String phone, String email) {
@@ -67,8 +70,6 @@ public class NewClassSchedule {
 	public long getId() {
 		return id;
 	}
-
-
 
 	public String getTeachername() {
 		return teachername;
@@ -156,8 +157,5 @@ public class NewClassSchedule {
 				+ ", isclass=" + isclass + ", subject=" + subject + ", section=" + section + ", time=" + time
 				+ ", date=" + date + ", phone=" + phone + ", email=" + email + "]";
 	}
-	
-	
-	
-	
+
 }

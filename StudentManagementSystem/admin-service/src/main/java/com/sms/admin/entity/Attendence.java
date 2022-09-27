@@ -8,13 +8,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "accountentity")
+@Table(name = "attendence")
 
 public class Attendence {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	@Column(name = "select_class")
+	private String selectclass;
+
+	@Column(name = "select_section")
+	private String selectsection;
+
+	@Column(name = "select_month")
+	private String selectmonth;
+
+	@Column(name = "student_name")
+	private String studentname;
+
+	@Column(name = "select_session")
+	private String selectsession;
 
 	@Column(name = "one")
 	private boolean one;
@@ -85,7 +99,7 @@ public class Attendence {
 
 	@Column(name = "twentyfour")
 	private boolean twentyfour;
-	
+
 	@Column(name = "twentyfive")
 	private boolean twentyfive;
 
@@ -105,15 +119,25 @@ public class Attendence {
 
 	@Column(name = "thirtyone")
 	private boolean thirtyone;
+	
 
+	public Attendence() {
+		super();
+	}
 
-	public Attendence(boolean one, boolean two, boolean three, boolean four, boolean five, boolean six, boolean seven,
-			boolean eight, boolean nine, boolean ten, boolean eleven, boolean twelve, boolean thirteen,
+	public Attendence( String selectclass, String selectsection, String selectmonth, String studentname,
+			String selectsession, boolean one, boolean two, boolean three, boolean four, boolean five, boolean six,
+			boolean seven, boolean eight, boolean nine, boolean ten, boolean eleven, boolean twelve, boolean thirteen,
 			boolean fourteen, boolean fifteen, boolean sixteen, boolean seventeen, boolean eighteen, boolean nineteen,
 			boolean twenty, boolean twentyone, boolean twentytwo, boolean twentythree, boolean twentyfour,
 			boolean twentyfive, boolean twentysix, boolean twentyseven, boolean twentyeight, boolean twentynine,
 			boolean thirty, boolean thirtyone) {
-		super();
+	
+		this.selectclass = selectclass;
+		this.selectsection = selectsection;
+		this.selectmonth = selectmonth;
+		this.studentname = studentname;
+		this.selectsession = selectsession;
 		this.one = one;
 		this.two = two;
 		this.three = three;
@@ -145,258 +169,296 @@ public class Attendence {
 		this.twentynine = twentynine;
 		this.thirty = thirty;
 		this.thirtyone = thirtyone;
-		
 	}
 
 	public long getId() {
 		return id;
 	}
 
+
+
+	public String getSelectclass() {
+		return selectclass;
+	}
+
+	public void setSelectclass(String selectclass) {
+		this.selectclass = selectclass;
+	}
+
+	public String getSelectsection() {
+		return selectsection;
+	}
+
+	public void setSelectsection(String selectsection) {
+		this.selectsection = selectsection;
+	}
+
+	public String getSelectmonth() {
+		return selectmonth;
+	}
+
+	public void setSelectmonth(String selectmonth) {
+		this.selectmonth = selectmonth;
+	}
+
+	public String getStudentname() {
+		return studentname;
+	}
+
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+
+	public String getSelectsession() {
+		return selectsession;
+	}
+
+	public void setSelectsession(String selectsession) {
+		this.selectsession = selectsession;
+	}
+
 	public boolean isOne() {
 		return one;
+	}
+
+	public void setOne(boolean one) {
+		this.one = one;
 	}
 
 	public boolean isTwo() {
 		return two;
 	}
 
-	public boolean isThree() {
-		return three;
-	}
-
-	public boolean isFour() {
-		return four;
-	}
-
-	public boolean isFive() {
-		return five;
-	}
-
-	public boolean isSix() {
-		return six;
-	}
-
-	public boolean isSeven() {
-		return seven;
-	}
-
-	public boolean isEight() {
-		return eight;
-	}
-
-	public boolean isNine() {
-		return nine;
-	}
-
-	public boolean isTen() {
-		return ten;
-	}
-
-	public boolean isEleven() {
-		return eleven;
-	}
-
-	public boolean isTwelve() {
-		return twelve;
-	}
-
-	public boolean isThirteen() {
-		return thirteen;
-	}
-
-	public boolean isFourteen() {
-		return fourteen;
-	}
-
-	public boolean isFifteen() {
-		return fifteen;
-	}
-
-	public boolean isSixteen() {
-		return sixteen;
-	}
-
-	public boolean isSeventeen() {
-		return seventeen;
-	}
-
-	public boolean isEighteen() {
-		return eighteen;
-	}
-
-	public boolean isNineteen() {
-		return nineteen;
-	}
-
-	public boolean isTwenty() {
-		return twenty;
-	}
-
-	public boolean isTwentyone() {
-		return twentyone;
-	}
-
-	public boolean isTwentytwo() {
-		return twentytwo;
-	}
-
-	public boolean isTwentythree() {
-		return twentythree;
-	}
-
-	public boolean isTwentyfour() {
-		return twentyfour;
-	}
-
-	public boolean isTwentyfive() {
-		return twentyfive;
-	}
-
-	public boolean isTwentysix() {
-		return twentysix;
-	}
-
-	public boolean isTwentyseven() {
-		return twentyseven;
-	}
-
-	public boolean isTwentyeight() {
-		return twentyeight;
-	}
-
-	public boolean isTwentynine() {
-		return twentynine;
-	}
-
-	public boolean isThirty() {
-		return thirty;
-	}
-
-	public boolean isThirtyone() {
-		return thirtyone;
-	}
-
-
-
-
-	public void setOne(boolean one) {
-		this.one = one;
-	}
-
 	public void setTwo(boolean two) {
 		this.two = two;
+	}
+
+	public boolean isThree() {
+		return three;
 	}
 
 	public void setThree(boolean three) {
 		this.three = three;
 	}
 
+	public boolean isFour() {
+		return four;
+	}
+
 	public void setFour(boolean four) {
 		this.four = four;
+	}
+
+	public boolean isFive() {
+		return five;
 	}
 
 	public void setFive(boolean five) {
 		this.five = five;
 	}
 
+	public boolean isSix() {
+		return six;
+	}
+
 	public void setSix(boolean six) {
 		this.six = six;
+	}
+
+	public boolean isSeven() {
+		return seven;
 	}
 
 	public void setSeven(boolean seven) {
 		this.seven = seven;
 	}
 
+	public boolean isEight() {
+		return eight;
+	}
+
 	public void setEight(boolean eight) {
 		this.eight = eight;
+	}
+
+	public boolean isNine() {
+		return nine;
 	}
 
 	public void setNine(boolean nine) {
 		this.nine = nine;
 	}
 
+	public boolean isTen() {
+		return ten;
+	}
+
 	public void setTen(boolean ten) {
 		this.ten = ten;
+	}
+
+	public boolean isEleven() {
+		return eleven;
 	}
 
 	public void setEleven(boolean eleven) {
 		this.eleven = eleven;
 	}
 
+	public boolean isTwelve() {
+		return twelve;
+	}
+
 	public void setTwelve(boolean twelve) {
 		this.twelve = twelve;
+	}
+
+	public boolean isThirteen() {
+		return thirteen;
 	}
 
 	public void setThirteen(boolean thirteen) {
 		this.thirteen = thirteen;
 	}
 
+	public boolean isFourteen() {
+		return fourteen;
+	}
+
 	public void setFourteen(boolean fourteen) {
 		this.fourteen = fourteen;
+	}
+
+	public boolean isFifteen() {
+		return fifteen;
 	}
 
 	public void setFifteen(boolean fifteen) {
 		this.fifteen = fifteen;
 	}
 
+	public boolean isSixteen() {
+		return sixteen;
+	}
+
 	public void setSixteen(boolean sixteen) {
 		this.sixteen = sixteen;
+	}
+
+	public boolean isSeventeen() {
+		return seventeen;
 	}
 
 	public void setSeventeen(boolean seventeen) {
 		this.seventeen = seventeen;
 	}
 
+	public boolean isEighteen() {
+		return eighteen;
+	}
+
 	public void setEighteen(boolean eighteen) {
 		this.eighteen = eighteen;
+	}
+
+	public boolean isNineteen() {
+		return nineteen;
 	}
 
 	public void setNineteen(boolean nineteen) {
 		this.nineteen = nineteen;
 	}
 
+	public boolean isTwenty() {
+		return twenty;
+	}
+
 	public void setTwenty(boolean twenty) {
 		this.twenty = twenty;
+	}
+
+	public boolean isTwentyone() {
+		return twentyone;
 	}
 
 	public void setTwentyone(boolean twentyone) {
 		this.twentyone = twentyone;
 	}
 
+	public boolean isTwentytwo() {
+		return twentytwo;
+	}
+
 	public void setTwentytwo(boolean twentytwo) {
 		this.twentytwo = twentytwo;
+	}
+
+	public boolean isTwentythree() {
+		return twentythree;
 	}
 
 	public void setTwentythree(boolean twentythree) {
 		this.twentythree = twentythree;
 	}
 
+	public boolean isTwentyfour() {
+		return twentyfour;
+	}
+
 	public void setTwentyfour(boolean twentyfour) {
 		this.twentyfour = twentyfour;
+	}
+
+	public boolean isTwentyfive() {
+		return twentyfive;
 	}
 
 	public void setTwentyfive(boolean twentyfive) {
 		this.twentyfive = twentyfive;
 	}
 
+	public boolean isTwentysix() {
+		return twentysix;
+	}
+
 	public void setTwentysix(boolean twentysix) {
 		this.twentysix = twentysix;
+	}
+
+	public boolean isTwentyseven() {
+		return twentyseven;
 	}
 
 	public void setTwentyseven(boolean twentyseven) {
 		this.twentyseven = twentyseven;
 	}
 
+	public boolean isTwentyeight() {
+		return twentyeight;
+	}
+
 	public void setTwentyeight(boolean twentyeight) {
 		this.twentyeight = twentyeight;
+	}
+
+	public boolean isTwentynine() {
+		return twentynine;
 	}
 
 	public void setTwentynine(boolean twentynine) {
 		this.twentynine = twentynine;
 	}
 
+	public boolean isThirty() {
+		return thirty;
+	}
+
 	public void setThirty(boolean thirty) {
 		this.thirty = thirty;
+	}
+
+	public boolean isThirtyone() {
+		return thirtyone;
 	}
 
 	public void setThirtyone(boolean thirtyone) {
@@ -405,22 +467,18 @@ public class Attendence {
 
 	@Override
 	public String toString() {
-		return "Attendence [id=" + id + ", one=" + one + ", two=" + two + ", three=" + three + ", four=" + four
-				+ ", five=" + five + ", six=" + six + ", seven=" + seven + ", eight=" + eight + ", nine=" + nine
-				+ ", ten=" + ten + ", eleven=" + eleven + ", twelve=" + twelve + ", thirteen=" + thirteen
-				+ ", fourteen=" + fourteen + ", fifteen=" + fifteen + ", sixteen=" + sixteen + ", seventeen="
-				+ seventeen + ", eighteen=" + eighteen + ", nineteen=" + nineteen + ", twenty=" + twenty
-				+ ", twentyone=" + twentyone + ", twentytwo=" + twentytwo + ", twentythree=" + twentythree
-				+ ", twentyfour=" + twentyfour + ", twentyfive=" + twentyfive + ", twentysix=" + twentysix
-				+ ", twentyseven=" + twentyseven + ", twentyeight=" + twentyeight + ", twentynine=" + twentynine
-				+ ", thirty=" + thirty + ", thirtyone=" + thirtyone + "]";
+		return "Attendence [id=" + id + ", selectclass=" + selectclass + ", selectsection=" + selectsection
+				+ ", selectmonth=" + selectmonth + ", studentname=" + studentname + ", selectsession=" + selectsession
+				+ ", one=" + one + ", two=" + two + ", three=" + three + ", four=" + four + ", five=" + five + ", six="
+				+ six + ", seven=" + seven + ", eight=" + eight + ", nine=" + nine + ", ten=" + ten + ", eleven="
+				+ eleven + ", twelve=" + twelve + ", thirteen=" + thirteen + ", fourteen=" + fourteen + ", fifteen="
+				+ fifteen + ", sixteen=" + sixteen + ", seventeen=" + seventeen + ", eighteen=" + eighteen
+				+ ", nineteen=" + nineteen + ", twenty=" + twenty + ", twentyone=" + twentyone + ", twentytwo="
+				+ twentytwo + ", twentythree=" + twentythree + ", twentyfour=" + twentyfour + ", twentyfive="
+				+ twentyfive + ", twentysix=" + twentysix + ", twentyseven=" + twentyseven + ", twentyeight="
+				+ twentyeight + ", twentynine=" + twentynine + ", thirty=" + thirty + ", thirtyone=" + thirtyone + "]";
 	}
 
-	
 
-	
-	
-	
-	
-	
+
 }

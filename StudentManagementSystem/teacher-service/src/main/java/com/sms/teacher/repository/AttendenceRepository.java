@@ -8,5 +8,5 @@ import com.sms.teacher.entity.Attendence;
 
 public interface AttendenceRepository extends JpaRepository<Attendence,Long>{
 
-	Optional<Attendence> findByStudentNameContaining(String studentname);
+	Optional<Attendence> findByIdContaining(long id);
 }	

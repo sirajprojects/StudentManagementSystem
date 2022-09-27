@@ -1,5 +1,7 @@
 package com.sms.teacher.entity;
 
+
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "classroutine")
+@Table(name = "class_routine")
 
 public class ClassRoutine {
 
@@ -16,16 +18,16 @@ public class ClassRoutine {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "subjectname")
+	@Column(name = "subject_name")
 	private String subjectname;
 
-	@Column(name = "subjecttype")
+	@Column(name = "subject_type")
 	private String subjecttype;
 
-	@Column(name = "selectclass")
+	@Column(name = "select_class")
 	private String selectclass;
 	
-	@Column(name = "selectcode")
+	@Column(name = "select_code")
 	private String selectcode;
 
 	public ClassRoutine(String subjectname, String subjecttype, String selectclass, String selectcode) {

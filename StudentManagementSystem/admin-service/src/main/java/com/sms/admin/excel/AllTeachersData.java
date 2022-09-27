@@ -57,12 +57,12 @@ public class AllTeachersData {
         row.createCell(6).setCellValue(teacher.getDateofbirth());
         row.createCell(7).setCellValue(teacher.getReligion());
         row.createCell(8).setCellValue(teacher.getEmail());
-        row.createCell(9).setCellValue(teacher.getInclass());
+        row.createCell(9).setCellValue(teacher.getIsclass());
         row.createCell(10).setCellValue(teacher.getAddres());
         row.createCell(11).setCellValue(teacher.getIdno());
         row.createCell(12).setCellValue(teacher.getPhone());
         row.createCell(13).setCellValue(teacher.getAdress());
-        row.createCell(14).setCellValue(teacher.getIsclass());
+       
         row.createCell(15).setCellValue(teacher.getSection());
       }
       workbook.write(out);

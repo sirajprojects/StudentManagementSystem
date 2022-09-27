@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,36 +14,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sms.teacher.entity.Attendence;
 import com.sms.teacher.repository.AttendenceRepository;
-import com.sms.teacher.repository.StudentAdmitRepository;
 
-
-@CrossOrigin(origins = "http://localhost:8085")
 @RestController
 @RequestMapping("/teacher")
 public class StudentAttendenceController {
-	
-	@Autowired
-	StudentAdmitRepository studentAdmitRepository;
-	
+
 	@Autowired
 	AttendenceRepository attendenceRepository;
-	
-	
+
 	@PostMapping("/attendence")
 	public ResponseEntity<Attendence> attendendeAdd(@RequestBody Attendence attendence) {
 		try {
 			Attendence _attendence = attendenceRepository
-					.save(new Attendence(
-							false,false,false,false,false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false
-							));
+					.save(new Attendence(null, null, null, null, null, false, false, false, false, false, false, false,
+							false, false, false, false, false, false, false, false, false, false, false, false, false,
+							false, false, false, false, false, false, false, false, false, false, false));
 			return new ResponseEntity<>(_attendence, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
-
-
-	
 
 	@GetMapping("/attendence/{id}")
 	public ResponseEntity<Attendence> getAttendeceById(@PathVariable("studentname") long id) {
@@ -56,7 +45,5 @@ public class StudentAttendenceController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-
-	
 
 }

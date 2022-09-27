@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.sms.admin.entity.AccountEntity;
+import com.sms.admin.entity.NewAdmin;
 
 
 
-public interface AccountRepository extends JpaRepository<AccountEntity,Long>{
+public interface AccountRepository extends JpaRepository<NewAdmin,Long>{
 
-	List<AccountEntity> findByIdnoContaining(String idno);
+	List<NewAdmin> findByIdnoContaining(String idno);
 }			

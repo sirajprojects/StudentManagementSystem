@@ -10,5 +10,6 @@ import com.sms.admin.entity.NewClassSchedule;
 
 public interface NewClassRepository extends JpaRepository<NewClassSchedule,Long>{
 
-	List<NewClassSchedule> findByIdContaining(String id);
+
+	List<NewClassSchedule> findByIdnoContaining(String idno);
 }			

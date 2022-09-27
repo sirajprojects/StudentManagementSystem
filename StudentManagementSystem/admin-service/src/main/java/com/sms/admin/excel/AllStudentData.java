@@ -57,11 +57,11 @@ public class AllStudentData {
         row.createCell(6).setCellValue(student.getDateofbirth());
         row.createCell(7).setCellValue(student.getReligion());
         row.createCell(8).setCellValue(student.getEmail());
-        row.createCell(9).setCellValue(student.getInclass());
+        row.createCell(9).setCellValue(student.getIsclass());
         row.createCell(10).setCellValue(student.getRoll());
-        row.createCell(11).setCellValue(student.getAdmissionId());
+        row.createCell(11).setCellValue(student.getAdmissionid());
         row.createCell(12).setCellValue(student.getPhone());
-        row.createCell(13).setCellValue(student.getAdress());
+        row.createCell(13).setCellValue(student.getAddress());
         row.createCell(14).setCellValue(student.getIsclass());
         row.createCell(15).setCellValue(student.getSection());
       }

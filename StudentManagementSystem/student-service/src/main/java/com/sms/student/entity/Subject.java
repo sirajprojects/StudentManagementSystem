@@ -16,16 +16,16 @@ public class Subject {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "subjectname")
+	@Column(name = "subject_name")
 	private String subjectname;
 
-	@Column(name = "subjecttype")
+	@Column(name = "subject_type")
 	private String subjecttype;
 
-	@Column(name = "selectclass")
+	@Column(name = "select_class")
 	private String selectclass;
 
-	@Column(name = "selectcode")
+	@Column(name = "select_code")
 	private String selectcode;
 
 	public Subject(String subjectname, String subjecttype, String selectclass, String selectcode) {

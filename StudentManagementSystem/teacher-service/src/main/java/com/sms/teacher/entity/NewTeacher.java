@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "accountentity")
+@Table(name = "new_teacher")
 
 public class NewTeacher {
 
@@ -16,25 +16,25 @@ public class NewTeacher {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "firstname")
+	@Column(name = "first_name")
 	private String firstname;
 
-	@Column(name = "lastname")
+	@Column(name = "last_name")
 	private String lastname;
 
-	@Column(name = "bloodgroup")
+	@Column(name = "blood_group")
 	private String bloodgroup;
 
 	@Column(name = "gender")
 	private String gender;
 
-	@Column(name = "fathername")
+	@Column(name = "father_name")
 	private String fathername;
 
-	@Column(name = "mothername")
+	@Column(name = "mother_name")
 	private String mothername;
 
-	@Column(name = "dateofbirth")
+	@Column(name = "date_of_birth")
 	private String dateofbirth;
 
 	@Column(name = "religion")
@@ -43,13 +43,13 @@ public class NewTeacher {
 	@Column(name = "email")
 	private String email;
 
-	@Column(name = "inclass")
+	@Column(name = "in_class")
 	private String inclass;
 
 	@Column(name = "address")
 	private String addres;
 
-	@Column(name = "idno")
+	@Column(name = "id_no")
 	private String idno;
 
 	@Column(name = "phone")
@@ -59,7 +59,7 @@ public class NewTeacher {
 	private String adress;
 	
 
-	@Column(name = "isclass")
+	@Column(name = "is_class")
 	private String isclass;
 	
 	@Column(name = "section")

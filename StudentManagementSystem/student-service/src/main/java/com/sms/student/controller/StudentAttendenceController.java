@@ -5,7 +5,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sms.student.entity.Attendence;
 import com.sms.student.repository.AttendenceRepository;
 
-
-
-@CrossOrigin(origins = "http://localhost:8084")
 @RestController
 @RequestMapping("/student")
 public class StudentAttendenceController {
-	
-	
+
 	@Autowired
 	AttendenceRepository attendenceRepository;
 
@@ -35,6 +30,5 @@ public class StudentAttendenceController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-	
 
 }

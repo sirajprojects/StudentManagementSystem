@@ -1,6 +1,5 @@
 package com.sms.teacher.controller;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -8,7 +7,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sms.teacher.entity.StudentAdmitForm;
 import com.sms.teacher.repository.StudentAdmitRepository;
 
-
-@CrossOrigin(origins = "http://localhost:8085")
 @RestController
 @RequestMapping("/teacher")
 public class TeacherStudentController {
-
 
 	@Autowired
 	StudentAdmitRepository studentAdmitRepository;
@@ -39,7 +34,6 @@ public class TeacherStudentController {
 		}
 	}
 
-	
 	@GetMapping("/studentdata")
 	public ResponseEntity<List<StudentAdmitForm>> getAllStudent(@RequestParam(required = false) String roll) {
 		try {

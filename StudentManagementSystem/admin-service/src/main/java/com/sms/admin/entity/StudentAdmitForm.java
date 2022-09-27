@@ -8,7 +8,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "accountentity")
+
+
+@Table(name = "student_admit_form")
 
 public class StudentAdmitForm {
 
@@ -16,25 +18,25 @@ public class StudentAdmitForm {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "firstname")
+	@Column(name = "first_name")
 	private String firstname;
 
-	@Column(name = "lastname")
+	@Column(name = "last_name")
 	private String lastname;
 
-	@Column(name = "bloodgroup")
+	@Column(name = "blood_group")
 	private String bloodgroup;
 
 	@Column(name = "gender")
 	private String gender;
 
-	@Column(name = "fathername")
+	@Column(name = "father_name")
 	private String fathername;
 
-	@Column(name = "mothername")
+	@Column(name = "mother_name")
 	private String mothername;
 
-	@Column(name = "dateofbirth")
+	@Column(name = "date_of_birth")
 	private String dateofbirth;
 
 	@Column(name = "religion")
@@ -43,32 +45,34 @@ public class StudentAdmitForm {
 	@Column(name = "email")
 	private String email;
 
-	@Column(name = "inclass")
-	private String inclass;
-
-	@Column(name = "admissionid")
+	@Column(name = "admission_id")
 	private String admissionid;
 
-	@Column(name = "roll")
+	@Column(name = "roll_no")
 	private String roll;
 
 	@Column(name = "phone")
 	private String phone;
 
-	@Column(name = "adress")
-	private String adress;
-	
+	@Column(name = "address")
+	private String address;
 
-	@Column(name = "isclass")
+	@Column(name = "is_class")
 	private String isclass;
-	
+
 	@Column(name = "section")
 	private String section;
 
-	public StudentAdmitForm(String firstname, String lastname, String bloodgroup, String gender, String fathername,
-			String mothername, String dateofbirth, String religion, String email, String inclass, String admissionid,
-			String roll, String phone, String adress, String isclass, String section) {
+	
+	
+	public StudentAdmitForm() {
 		super();
+	}
+
+	public StudentAdmitForm(String firstname, String lastname, String bloodgroup, String gender, String fathername,
+			String mothername, String dateofbirth, String religion, String email, String admissionid, String roll,
+			String phone, String address, String isclass, String section) {
+	
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.bloodgroup = bloodgroup;
@@ -78,11 +82,10 @@ public class StudentAdmitForm {
 		this.dateofbirth = dateofbirth;
 		this.religion = religion;
 		this.email = email;
-		this.inclass = inclass;
 		this.admissionid = admissionid;
 		this.roll = roll;
 		this.phone = phone;
-		this.adress = adress;
+		this.address = address;
 		this.isclass = isclass;
 		this.section = section;
 	}
@@ -127,11 +130,7 @@ public class StudentAdmitForm {
 		return email;
 	}
 
-	public String getInclass() {
-		return inclass;
-	}
-
-	public String getAdmissionId() {
+	public String getAdmissionid() {
 		return admissionid;
 	}
 
@@ -143,8 +142,8 @@ public class StudentAdmitForm {
 		return phone;
 	}
 
-	public String getAdress() {
-		return adress;
+	public String getAddress() {
+		return address;
 	}
 
 	public String getIsclass() {
@@ -193,11 +192,7 @@ public class StudentAdmitForm {
 		this.email = email;
 	}
 
-	public void setInclass(String inclass) {
-		this.inclass = inclass;
-	}
-
-	public void setAdmissionId(String admissionid) {
+	public void setAdmissionid(String admissionid) {
 		this.admissionid = admissionid;
 	}
 
@@ -209,8 +204,8 @@ public class StudentAdmitForm {
 		this.phone = phone;
 	}
 
-	public void setAdress(String adress) {
-		this.adress = adress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public void setIsclass(String isclass) {
@@ -225,10 +220,11 @@ public class StudentAdmitForm {
 	public String toString() {
 		return "StudentAdmitForm [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", bloodgroup="
 				+ bloodgroup + ", gender=" + gender + ", fathername=" + fathername + ", mothername=" + mothername
-				+ ", dateofbirth=" + dateofbirth + ", religion=" + religion + ", email=" + email + ", inclass="
-				+ inclass + ", admissionid=" + admissionid + ", roll=" + roll + ", phone=" + phone + ", adress=" + adress
-				+ ", isclass=" + isclass + ", section=" + section + "]";
+				+ ", dateofbirth=" + dateofbirth + ", religion=" + religion + ", email=" + email + ", admissionid="
+				+ admissionid + ", roll=" + roll + ", phone=" + phone + ", address=" + address + ", isclass=" + isclass
+				+ ", section=" + section + "]";
 	}
-
 	
+	
+
 }

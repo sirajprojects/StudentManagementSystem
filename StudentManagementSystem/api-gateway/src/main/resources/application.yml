@@ -1,24 +1,19 @@
-server:
-  port: 8080
-
 spring:
+  application:
+    name: api-gateway-service
   cloud:
     gateway:
       routes:
-      - id: Admin
-        uri: http://localhost:8090/
-        predicates:
-        - Path=/admin/**
-      - id: Teacher
-        uri: http://localhost:8085/
-        predicates:
-        - Path=/teacher/**
-      - id: Student
-        uri: http://localhost:8084/
-        predicates:
-        - Path=/student/**
-      - id: Login
-        uri: http://localhost:8083/
-        predicates:
-        - Path=/login/**
-   
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
+          predicates:
+            - Path=/admin/**
+        - id: student-service
+          uri: lb://STUDENT-SERVICE
+          predicates:
+            - Path=/student/**
+        - id: teacher-service
+          uri: lb://teacher-service
+          predicates:
+            - Path=/teacher/**
+      

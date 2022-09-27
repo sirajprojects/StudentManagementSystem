@@ -8,7 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "accountentity")
+
+@Table(name = "new_teacher")
 
 public class NewTeacher {
 
@@ -16,25 +17,25 @@ public class NewTeacher {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
 
-	@Column(name = "firstname")
+	@Column(name = "first_name")
 	private String firstname;
 
-	@Column(name = "lastname")
+	@Column(name = "last_name")
 	private String lastname;
 
-	@Column(name = "bloodgroup")
+	@Column(name = "blood_group")
 	private String bloodgroup;
 
 	@Column(name = "gender")
 	private String gender;
 
-	@Column(name = "fathername")
+	@Column(name = "father_name")
 	private String fathername;
 
-	@Column(name = "mothername")
+	@Column(name = "mother_name")
 	private String mothername;
 
-	@Column(name = "dateofbirth")
+	@Column(name = "date_of_birth")
 	private String dateofbirth;
 
 	@Column(name = "religion")
@@ -43,13 +44,13 @@ public class NewTeacher {
 	@Column(name = "email")
 	private String email;
 
-	@Column(name = "inclass")
-	private String inclass;
+	@Column(name = "is_class")
+	private String isclass;
 
 	@Column(name = "address")
 	private String addres;
 
-	@Column(name = "idno")
+	@Column(name = "id_no")
 	private String idno;
 
 	@Column(name = "phone")
@@ -57,18 +58,18 @@ public class NewTeacher {
 
 	@Column(name = "adress")
 	private String adress;
-	
 
-	@Column(name = "isclass")
-	private String isclass;
-	
 	@Column(name = "section")
 	private String section;
 
-	public NewTeacher(String firstname, String lastname, String bloodgroup, String gender, String fathername,
-			String mothername, String dateofbirth, String religion, String email, String inclass, String addres,
-			String idno, String phone, String adress, String isclass, String section) {
+	public NewTeacher() {
 		super();
+	}
+
+	public NewTeacher(String firstname, String lastname, String bloodgroup, String gender, String fathername,
+			String mothername, String dateofbirth, String religion, String email, String isclass, String addres,
+			String idno, String phone, String adress, String section) {
+
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.bloodgroup = bloodgroup;
@@ -78,12 +79,12 @@ public class NewTeacher {
 		this.dateofbirth = dateofbirth;
 		this.religion = religion;
 		this.email = email;
-		this.inclass = inclass;
+		this.isclass = isclass;
 		this.addres = addres;
 		this.idno = idno;
 		this.phone = phone;
 		this.adress = adress;
-		this.isclass = isclass;
+
 		this.section = section;
 	}
 
@@ -127,8 +128,8 @@ public class NewTeacher {
 		return email;
 	}
 
-	public String getInclass() {
-		return inclass;
+	public String getIsclass() {
+		return isclass;
 	}
 
 	public String getAddres() {
@@ -147,15 +148,9 @@ public class NewTeacher {
 		return adress;
 	}
 
-	public String getIsclass() {
-		return isclass;
-	}
-
 	public String getSection() {
 		return section;
 	}
-
-
 
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
@@ -193,8 +188,8 @@ public class NewTeacher {
 		this.email = email;
 	}
 
-	public void setInclass(String inclass) {
-		this.inclass = inclass;
+	public void setIsclass(String isclass) {
+		this.isclass = isclass;
 	}
 
 	public void setAddres(String addres) {
@@ -213,10 +208,6 @@ public class NewTeacher {
 		this.adress = adress;
 	}
 
-	public void setIsclass(String isclass) {
-		this.isclass = isclass;
-	}
-
 	public void setSection(String section) {
 		this.section = section;
 	}
@@ -225,11 +216,9 @@ public class NewTeacher {
 	public String toString() {
 		return "NewTeacher [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", bloodgroup="
 				+ bloodgroup + ", gender=" + gender + ", fathername=" + fathername + ", mothername=" + mothername
-				+ ", dateofbirth=" + dateofbirth + ", religion=" + religion + ", email=" + email + ", inclass="
-				+ inclass + ", addres=" + addres + ", idno=" + idno + ", phone=" + phone + ", adress=" + adress
-				+ ", isclass=" + isclass + ", section=" + section + "]";
+				+ ", dateofbirth=" + dateofbirth + ", religion=" + religion + ", email=" + email + ", isclass="
+				+ isclass + ", addres=" + addres + ", idno=" + idno + ", phone=" + phone + ", adress=" + adress
+				+ ", section=" + section + "]";
 	}
-	
-	
-	
+
 }
